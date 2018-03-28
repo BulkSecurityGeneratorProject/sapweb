@@ -1,0 +1,134 @@
+
+<div *ngIf="disolucion">
+    <h2><span jhiTranslate="sapwebApp.disolucion.detail.title">Disolucion</span> {{disolucion.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="sapwebApp.disolucion.rut">Rut</span></dt>
+        <dd>
+            <span>{{disolucion.rut}}</span>
+        </dd>
+        <dt><span jhiTranslate="sapwebApp.disolucion.dv">Dv</span></dt>
+        <dd>
+            <span>{{disolucion.dv}}</span>
+        </dd>
+        <dt><span jhiTranslate="sapwebApp.disolucion.extracto">Extracto</span></dt>
+        <dd>
+            <span>{{disolucion.extracto}}</span>
+        </dd>
+        <dt><span jhiTranslate="sapwebApp.disolucion.nombre">Nombre</span></dt>
+        <dd>
+            <span>{{disolucion.nombre}}</span>
+        </dd>
+        <dt><span jhiTranslate="sapwebApp.disolucion.fecpub">Fecpub</span></dt>
+        <dd>
+            <span>{{disolucion.fecpub}}</span>
+        </dd>
+        <dt><span jhiTranslate="sapwebApp.disolucion.nomfan">Nomfan</span></dt>
+        <dd>
+            <span>{{disolucion.nomfan}}</span>
+        </dd>
+        <dt><span jhiTranslate="sapwebApp.disolucion.feconst">Feconst</span></dt>
+        <dd>
+            <span>{{disolucion.feconst}}</span>
+        </dd>
+        <dt><span jhiTranslate="sapwebApp.disolucion.tipconst">Tipconst</span></dt>
+        <dd>
+            <span>{{disolucion.tipconst}}</span>
+        </dd>
+        <dt><span jhiTranslate="sapwebApp.disolucion.duracion">Duracion</span></dt>
+        <dd>
+            <span>{{disolucion.duracion}}</span>
+        </dd>
+        <dt><span jhiTranslate="sapwebApp.disolucion.fecterm">Fecterm</span></dt>
+        <dd>
+            <span>{{disolucion.fecterm}}</span>
+        </dd>
+        <dt><span jhiTranslate="sapwebApp.disolucion.cappag">Cappag</span></dt>
+        <dd>
+            <span>{{disolucion.cappag}}</span>
+        </dd>
+        <dt><span jhiTranslate="sapwebApp.disolucion.capsus">Capsus</span></dt>
+        <dd>
+            <span>{{disolucion.capsus}}</span>
+        </dd>
+        <dt><span jhiTranslate="sapwebApp.disolucion.nacciones">Nacciones</span></dt>
+        <dd>
+            <span>{{disolucion.nacciones}}</span>
+        </dd>
+        <dt><span jhiTranslate="sapwebApp.disolucion.notariorut">Notariorut</span></dt>
+        <dd>
+            <span>{{disolucion.notariorut}}</span>
+        </dd>
+        <dt><span jhiTranslate="sapwebApp.disolucion.notariodv">Notariodv</span></dt>
+        <dd>
+            <span>{{disolucion.notariodv}}</span>
+        </dd>
+        <dt><span jhiTranslate="sapwebApp.disolucion.directorrut">Directorrut</span></dt>
+        <dd>
+            <span>{{disolucion.directorrut}}</span>
+        </dd>
+        <dt><span jhiTranslate="sapwebApp.disolucion.directordv">Directordv</span></dt>
+        <dd>
+            <span>{{disolucion.directordv}}</span>
+        </dd>
+        <dt><span jhiTranslate="sapwebApp.disolucion.reprut">Reprut</span></dt>
+        <dd>
+            <span>{{disolucion.reprut}}</span>
+        </dd>
+        <dt><span jhiTranslate="sapwebApp.disolucion.repdv">Repdv</span></dt>
+        <dd>
+            <span>{{disolucion.repdv}}</span>
+        </dd>
+        <dt><span jhiTranslate="sapwebApp.disolucion.regcom">Regcom</span></dt>
+        <dd>
+            <span>{{disolucion.regcom}}</span>
+        </dd>
+        <dt><span jhiTranslate="sapwebApp.disolucion.fojas">Fojas</span></dt>
+        <dd>
+            <span>{{disolucion.fojas}}</span>
+        </dd>
+        <dt><span jhiTranslate="sapwebApp.disolucion.num">Num</span></dt>
+        <dd>
+            <span>{{disolucion.num}}</span>
+        </dd>
+        <dt><span jhiTranslate="sapwebApp.disolucion.ano">Ano</span></dt>
+        <dd>
+            <span>{{disolucion.ano}}</span>
+        </dd>
+        <dt><span jhiTranslate="sapwebApp.disolucion.fecesc">Fecesc</span></dt>
+        <dd>
+            <span>{{disolucion.fecesc | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span jhiTranslate="sapwebApp.disolucion.estado">Estado</span></dt>
+        <dd>
+            <span>{{disolucion.estado}}</span>
+        </dd>
+        <dt><span jhiTranslate="sapwebApp.disolucion.grupo">Grupo</span></dt>
+        <dd>
+            <span>{{disolucion.grupo}}</span>
+        </dd>
+        <dt><span jhiTranslate="sapwebApp.disolucion.fecact">Fecact</span></dt>
+        <dd>
+            <span>{{disolucion.fecact | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span jhiTranslate="sapwebApp.disolucion.fecactnom">Fecactnom</span></dt>
+        <dd>
+            <span>{{disolucion.fecactnom | date:'mediumDate'}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'disolucion-sapweb/'+ disolucion.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

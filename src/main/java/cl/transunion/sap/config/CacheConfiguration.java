@@ -42,6 +42,13 @@ public class CacheConfiguration {
             cm.createCache(cl.transunion.sap.domain.User.class.getName(), jcacheConfiguration);
             cm.createCache(cl.transunion.sap.domain.Authority.class.getName(), jcacheConfiguration);
             cm.createCache(cl.transunion.sap.domain.User.class.getName() + ".authorities", jcacheConfiguration);
+            cm.createCache(cl.transunion.sap.domain.CargaSocvig.class.getName(), jcacheConfiguration);
+            cm.createCache(cl.transunion.sap.domain.ControlCambioRazon.class.getName(), jcacheConfiguration);
+            cm.createCache(cl.transunion.sap.domain.Socio.class.getName(), jcacheConfiguration);
+            cm.createCache(cl.transunion.sap.domain.SocioDatPer.class.getName(), jcacheConfiguration);
+            cm.createCache(cl.transunion.sap.domain.Constitucion.class.getName(), jcacheConfiguration);
+            cm.createCache(cl.transunion.sap.domain.Modificacion.class.getName(), jcacheConfiguration);
+            cm.createCache(cl.transunion.sap.domain.Disolucion.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }

@@ -1,0 +1,138 @@
+
+<div *ngIf="modificacion">
+    <h2><span jhiTranslate="sapwebApp.modificacion.detail.title">Modificacion</span> {{modificacion.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="sapwebApp.modificacion.rut">Rut</span></dt>
+        <dd>
+            <span>{{modificacion.rut}}</span>
+        </dd>
+        <dt><span jhiTranslate="sapwebApp.modificacion.dv">Dv</span></dt>
+        <dd>
+            <span>{{modificacion.dv}}</span>
+        </dd>
+        <dt><span jhiTranslate="sapwebApp.modificacion.extracto">Extracto</span></dt>
+        <dd>
+            <span>{{modificacion.extracto}}</span>
+        </dd>
+        <dt><span jhiTranslate="sapwebApp.modificacion.nombre">Nombre</span></dt>
+        <dd>
+            <span>{{modificacion.nombre}}</span>
+        </dd>
+        <dt><span jhiTranslate="sapwebApp.modificacion.fecpub">Fecpub</span></dt>
+        <dd>
+            <span>{{modificacion.fecpub}}</span>
+        </dd>
+        <dt><span jhiTranslate="sapwebApp.modificacion.nomfan">Nomfan</span></dt>
+        <dd>
+            <span>{{modificacion.nomfan}}</span>
+        </dd>
+        <dt><span jhiTranslate="sapwebApp.modificacion.feconst">Feconst</span></dt>
+        <dd>
+            <span>{{modificacion.feconst}}</span>
+        </dd>
+        <dt><span jhiTranslate="sapwebApp.modificacion.tipconst">Tipconst</span></dt>
+        <dd>
+            <span>{{modificacion.tipconst}}</span>
+        </dd>
+        <dt><span jhiTranslate="sapwebApp.modificacion.duracion">Duracion</span></dt>
+        <dd>
+            <span>{{modificacion.duracion}}</span>
+        </dd>
+        <dt><span jhiTranslate="sapwebApp.modificacion.fecterm">Fecterm</span></dt>
+        <dd>
+            <span>{{modificacion.fecterm}}</span>
+        </dd>
+        <dt><span jhiTranslate="sapwebApp.modificacion.cappag">Cappag</span></dt>
+        <dd>
+            <span>{{modificacion.cappag}}</span>
+        </dd>
+        <dt><span jhiTranslate="sapwebApp.modificacion.capsus">Capsus</span></dt>
+        <dd>
+            <span>{{modificacion.capsus}}</span>
+        </dd>
+        <dt><span jhiTranslate="sapwebApp.modificacion.nacciones">Nacciones</span></dt>
+        <dd>
+            <span>{{modificacion.nacciones}}</span>
+        </dd>
+        <dt><span jhiTranslate="sapwebApp.modificacion.notariorut">Notariorut</span></dt>
+        <dd>
+            <span>{{modificacion.notariorut}}</span>
+        </dd>
+        <dt><span jhiTranslate="sapwebApp.modificacion.notariodv">Notariodv</span></dt>
+        <dd>
+            <span>{{modificacion.notariodv}}</span>
+        </dd>
+        <dt><span jhiTranslate="sapwebApp.modificacion.directorrut">Directorrut</span></dt>
+        <dd>
+            <span>{{modificacion.directorrut}}</span>
+        </dd>
+        <dt><span jhiTranslate="sapwebApp.modificacion.directordv">Directordv</span></dt>
+        <dd>
+            <span>{{modificacion.directordv}}</span>
+        </dd>
+        <dt><span jhiTranslate="sapwebApp.modificacion.reprut">Reprut</span></dt>
+        <dd>
+            <span>{{modificacion.reprut}}</span>
+        </dd>
+        <dt><span jhiTranslate="sapwebApp.modificacion.repdv">Repdv</span></dt>
+        <dd>
+            <span>{{modificacion.repdv}}</span>
+        </dd>
+        <dt><span jhiTranslate="sapwebApp.modificacion.regcom">Regcom</span></dt>
+        <dd>
+            <span>{{modificacion.regcom}}</span>
+        </dd>
+        <dt><span jhiTranslate="sapwebApp.modificacion.fojas">Fojas</span></dt>
+        <dd>
+            <span>{{modificacion.fojas}}</span>
+        </dd>
+        <dt><span jhiTranslate="sapwebApp.modificacion.num">Num</span></dt>
+        <dd>
+            <span>{{modificacion.num}}</span>
+        </dd>
+        <dt><span jhiTranslate="sapwebApp.modificacion.ano">Ano</span></dt>
+        <dd>
+            <span>{{modificacion.ano}}</span>
+        </dd>
+        <dt><span jhiTranslate="sapwebApp.modificacion.fpubconst">Fpubconst</span></dt>
+        <dd>
+            <span>{{modificacion.fpubconst}}</span>
+        </dd>
+        <dt><span jhiTranslate="sapwebApp.modificacion.fecescrit">Fecescrit</span></dt>
+        <dd>
+            <span>{{modificacion.fecescrit | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span jhiTranslate="sapwebApp.modificacion.estado">Estado</span></dt>
+        <dd>
+            <span>{{modificacion.estado}}</span>
+        </dd>
+        <dt><span jhiTranslate="sapwebApp.modificacion.grupo">Grupo</span></dt>
+        <dd>
+            <span>{{modificacion.grupo}}</span>
+        </dd>
+        <dt><span jhiTranslate="sapwebApp.modificacion.fecact">Fecact</span></dt>
+        <dd>
+            <span>{{modificacion.fecact | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span jhiTranslate="sapwebApp.modificacion.fecactnom">Fecactnom</span></dt>
+        <dd>
+            <span>{{modificacion.fecactnom | date:'mediumDate'}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'modificacion-sapweb/'+ modificacion.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

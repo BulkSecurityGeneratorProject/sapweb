@@ -1,0 +1,38 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "iden",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "profesion",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "direccion",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "comuna",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ciudad",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "region",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20180328210341",
+    "javadoc": "table SOCCONS_SOCIOS_DATPER",
+    "entityTableName": "socio_dat_per",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "angularJSSuffix": "sapweb"
+}
